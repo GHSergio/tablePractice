@@ -13,22 +13,27 @@
   <body>
     <div class="main-app">
       <div class="sidebar">
+        <div class="logo"></div>
         <div class="icon-wrapper">
-          <div class="logo">
-            <a href="#"
-              ><img class="logo-mark" src="./icon/logo.svg" alt="logo"
-            /></a>
-          </div>
-          <div class="icon">
-            <a href="#" class="link" data-id="1"
-              ><img src="./icon/frame.svg" class="icon-item" alt=""
-            /></a>
-            <a href="#" class="link" data-id="2"
-              ><img src="./icon/folder.svg" class="icon-item" alt=""
-            /></a>
-            <a href="#" class="link" data-id="3"
-              ><img src="./icon/mail.svg" class="icon-item" alt=""
-            /></a>
+          <div class="icons">
+            <div class="icon-item link-frame">
+              <img src="./icon/frame.svg" class="icon-item" alt="frame" />
+            </div>
+            <div class="icon-item folder">
+              <img src="./icon/folder.svg" class="icon-item" alt="folder" />
+            </div>
+            <div class="icon-item mail">
+              <img src="./icon/mail.svg" class="icon-item" alt="mail" />
+            </div>
+            <div class="icon-item">
+              <label class="sidebar__darkmode__label" for="dark__mode__toggle">
+              </label>
+              <input
+                type="checkbox"
+                class="sidebar__darkmode__input"
+                id="dark__mode__toggle"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -36,67 +41,95 @@
         <div class="right-container">
           <h1>Campaign</h1>
           <div class="table-panel">
-            <div class="table-nav">
-              <input type="checkbox" id="checkboxId" />
-              <div class="table-title">
-                <tr>
-                  <th>
-                    <span class="id">ID</span>
-                    <span class="name">Name</span>
-                    <span class="advertiser">Advertiser</span>
-                    <span class="description">Description</span>
-                    <span class="price">Price</span>
-                    <span class="start-time">Start Time</span>
-                    <span class="end-time">End Time</span>
-                    <span class="actions">Actions</span>
-                  </th>
-                </tr>
-              </div>
+            <div class="table-title">
+              <tr class="table-row">
+                <th class="thead table-title-checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkboxId"
+                    class="table-checkbox"
+                  />
+                </th>
+                <th class="thead table-title-id"><span>ID</span></th>
+                <th class="thead table-title-name"><span>Name</span></th>
+                <th class="table-title-advertiser">
+                  <span class="advertiser"
+                    >Advertiser
+                    <p class="group">group</p></span
+                  >
+                </th>
+                <th class="table-title-description">Description</th>
+                <th class="table-title-price">
+                  <span class="price"
+                    >Price<img src="./icon/sort.svg" alt="sort"
+                  /></span>
+                </th>
+                <th class="table-title-startTime">
+                  <span class="start-time"
+                    >Start Time<img src="./icon/sort.svg" alt="sort"
+                  /></span>
+                </th>
+                <th class="table-title-endTime">
+                  <span class="end-time"
+                    >End Time<img src="./icon/sort.svg" alt="sort"
+                  /></span>
+                </th>
+                <th class="table-title-actions">Actions</th>
+              </tr>
             </div>
 
             <div class="table-content scrollbar">
-              <div class="content-wrapper">
-                <input type="checkbox" class="content-input" />
-                <div class="contents">
-                  <tr>
-                    <td class="table-title-content">
-                      <span class="id">1</span>
-                      <span class="name">Christmas 2020</span>
-                      <span class="advertiser">Food Market</span>
-                      <span class="description"
-                        >holiday night during chr...</span
-                      >
-                      <span class="pricve">$2000</span>
-                      <span class="start-time">2020/12/24 19:30</span>
-                      <span class="end-time">2021/01/02 23:00</span>
-                      <div class="action-panel">
-                        <div class="action">
-                          <input type="checkbox" class="action-toggle" id="action-toggle" />
-                          <ul class="action-list">
-                              <li class="action-list-item"><img
-                            class="action-item"
-                            src="./icon/duplicate.svg"
-                            alt="duplicate"
-                          /><span>duplicate</span>
-                              <li class="action-list-item"><img class="action-item" src="./icon/edit.svg"
-                          alt=edit"" />
-                          <span>edit</span></li>
-                              <li class="action-list-item"><img
-                            class="action-item"
-                            src="./icon/delete.svg"
-                            alt="delete"
-                          /><span>delete</span></li>
-                          </ul>
-                          <label for="action-toggle" class="action-toggle-label">
-                            <span class="hamburger"></span>
-                          </label>
-                       
+              <!-- <div class="table-content-wrapper">
+                <tr class="table-row">
+                  <th class="table-content-checkbox">
+                    <input type="checkbox" class="table-checkbox" />
+                  </th> 
+                  <th class="table-content-id"><span>ID</span></th>
+                  <th class="table-content-name"><span>Name</span></th>
+                  <th class="table-content-advertiser">
+                    <span class="advertiser"
+                      >Advertiser
+                      <p class="group">group</p></span
+                    >
+                  </th>
+                  <th class="table-content-description">Description</th>
+                  <th class="table-content-price">
+                    <span class="price">Price</span>
+                  </th>
+                  <th class="table-content-startTime">
+                    <span class="start-time">Start Time</span>
+                  </th>
+                  <th class="table-content-endTime">
+                    <span class="end-time">End Time</span>
+                  </th>
+                  <th class="table-content-actions">
+                    <img src="./icon/menu.svg" alt="" class="menu" />
+                    <div class="menu-content" id="action__menu_1">
+                      <div class="menu-item">
+                        <img
+                          src="./icon/duplicate.svg"
+                          alt="duplicate"
+                          class="menu-img"
+                        /><span class="menu-text">Duplicate</span>
                       </div>
-                    </td>
-                  </tr>
-                </div>
-              </div>
-              
+                      <div class="menu-item">
+                        <img
+                          src="./icon/edit.svg"
+                          alt="edit"
+                          class="menu-img"
+                        /><span class="menu-text">Edit</span>
+                      </div>
+                      <div class="menu-item">
+                        <img
+                          src="./icon/delete.svg"
+                          alt="delete"
+                          class="menu-img"
+                        /><span class="menu-text">Delete</span>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </div> -->
             </div>
           </div>
         </div>
@@ -105,4 +138,3 @@
     <script src="./app.js"></script>
   </body>
 </html>
-
